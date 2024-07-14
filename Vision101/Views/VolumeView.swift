@@ -6,10 +6,34 @@
 //
 
 import SwiftUI
+import RealityKit
+import RealityKitContent
 
 struct VolumeView: View {
+    @State var runAnimation = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Button("Start") {
+                runAnimation.toggle()
+            }
+            
+            RealityView { content in
+                if let scene = try? await Entity(named: "Scene", in: realityKitContentBundle) {
+                    content.add(scene)
+                }
+            } update: { content in
+                if let scene = content.entities.first {
+                    scene.availableAnimations.forEach { animation in
+                        if runAnimation {
+                            scene.playAnimation(animation.repeat(), transitionDuration: 3, startsPaused: false)
+                        } else {
+                            scene.stopAllAnimations()
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
