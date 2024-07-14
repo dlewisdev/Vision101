@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		71853B022C4434F50081CCB8 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71853B012C4434F50081CCB8 /* ImmersiveView.swift */; };
+		71AB19A22C44552A007695EC /* SkyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AB19A12C44552A007695EC /* SkyView.swift */; };
+		71AB19A52C4457B7007695EC /* sunlight.skybox in Resources */ = {isa = PBXBuildFile; fileRef = 71AB19A42C4457B7007695EC /* sunlight.skybox */; };
 		71EAFF452C31D10100611474 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 71EAFF442C31D10100611474 /* RealityKitContent */; };
 		71EAFF472C31D10100611474 /* Vision101App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EAFF462C31D10100611474 /* Vision101App.swift */; };
 		71EAFF492C31D10100611474 /* ContentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EAFF482C31D10100611474 /* ContentListView.swift */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		71853B012C4434F50081CCB8 /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
+		71AB19A12C44552A007695EC /* SkyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyView.swift; sourceTree = "<group>"; };
+		71AB19A42C4457B7007695EC /* sunlight.skybox */ = {isa = PBXFileReference; lastKnownFileType = file.skybox; path = sunlight.skybox; sourceTree = "<group>"; };
 		71EAFF3F2C31D10100611474 /* Vision101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vision101.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71EAFF432C31D10100611474 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		71EAFF462C31D10100611474 /* Vision101App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vision101App.swift; sourceTree = "<group>"; };
@@ -44,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71AB19A32C445792007695EC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				71AB19A42C4457B7007695EC /* sunlight.skybox */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		71EAFF362C31D10100611474 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +76,7 @@
 		71EAFF412C31D10100611474 /* Vision101 */ = {
 			isa = PBXGroup;
 			children = (
+				71AB19A32C445792007695EC /* Resources */,
 				71EAFF5A2C31D4FC00611474 /* Views */,
 				71EAFF592C31D4EA00611474 /* Model */,
 				71EAFF462C31D10100611474 /* Vision101App.swift */,
@@ -105,6 +118,7 @@
 				71EAFF5B2C34725000611474 /* VolumeView.swift */,
 				71EAFF552C31D36800611474 /* CourseView.swift */,
 				71853B012C4434F50081CCB8 /* ImmersiveView.swift */,
+				71AB19A12C44552A007695EC /* SkyView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71EAFF4E2C31D10200611474 /* Preview Assets.xcassets in Resources */,
+				71AB19A52C4457B7007695EC /* sunlight.skybox in Resources */,
 				71EAFF4B2C31D10200611474 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71AB19A22C44552A007695EC /* SkyView.swift in Sources */,
 				71EAFF582C31D4C700611474 /* Course.swift in Sources */,
 				71EAFF492C31D10100611474 /* ContentListView.swift in Sources */,
 				71853B022C4434F50081CCB8 /* ImmersiveView.swift in Sources */,
