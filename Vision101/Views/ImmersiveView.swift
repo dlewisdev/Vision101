@@ -6,10 +6,25 @@
 //
 
 import SwiftUI
+import RealityKit
+import RealityKitContent
 
 struct ImmersiveView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        RealityView { content in
+            if let scene = try? await Entity(named: "ImmersiveScene", in: realityKitContentBundle) {
+                content.add(scene)
+            }
+        } update: { content in
+            if let scene = content.entities.first {
+                scene.availableAnimations.forEach {
+                    animation in
+                    scene.playAnimation(animation.repeat(), transitionDuration: 3, startsPaused: false)
+                }
+            }
+        }
+        .offset(y: -2000)
+        .offset(z: -1500)
     }
 }
 
